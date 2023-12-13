@@ -10,5 +10,5 @@ void read_command(char *command, size_t size) {
 			exit(EXIT_FAILURE);
 		}
 	}
-	command[strcspn(command, "\n")] = '\0'; // Remove newline
+	command[strcspn(command, "\n")] = '\0'; /* Remove newline*/
 }
