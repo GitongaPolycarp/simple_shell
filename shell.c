@@ -1,18 +1,22 @@
 #include "shell.h"
-/*
+/**
+ * main - the functionindicates the main entry.
  *
+ * Return: (void).
  */
 
-int main(void) {
-	char command[120];
+int main(void)
+{
+	char cmd[120];
 
-	while (true) {
-		display_prompt();
-		read_command(command, sizeof(command));
-		execute_command(command);
+	while (true)
+	{
+		disp_pmpt();
+		get_cmd(cmd, sizeof(cmd));
+		exec_cmd(cmd);
 	}
 
 
 
-	return 0;
+	return (0);
 }

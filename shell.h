@@ -1,7 +1,7 @@
 #ifndef SHELL_H
 #define SHELL_H
 /*
- *The kjxjhcjxh
+ *These are libraries to the underlying files
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,14 +10,11 @@
 #include <stdbool.h>
 
 /*
- *thebse aibfbskf
+ *The follong are function names to files.
  */
-void display_prompt(void);
-void leo_print(const char *message);
-void read_command(char *command, size_t size);
-void execute_command(const char *command);
+void disp_pmpt(void);
+void shell_print(const char *result);
+void get_cmd(char *cmd, size_t len);
+void exec_cmd(const char *cmd);
 
-
-
-
-#endif /* SHELL_H */
+#endif
