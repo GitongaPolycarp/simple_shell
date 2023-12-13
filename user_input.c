@@ -1,14 +1,25 @@
 #include "shell.h"
 
-void read_command(char *command, size_t size) {
-	if (fgets(command, size, stdin) == NULL) {
-		if (feof(stdin)) {
-			leo_print("\n");
+/**
+ * get_cmd - function gets the command.
+ * @cmd: the command given
+ * @len: the length of a character
+ */
+
+void get_cmd(char *cmd, size_t len)
+{
+	if (fgets(cmd, len, stdin) == NULL)
+	{
+		if (feof(stdin))
+		{
+			shell_print("\n");
 			exit(EXIT_SUCCESS);
-		} else {
-			leo_print("Error while reading input.\n");
+		}
+		else
+		{
+			shell_print("Error while reading input.\n");
 			exit(EXIT_FAILURE);
 		}
 	}
-	command[strcspn(command, "\n")] = '\0'; /* Remove newline*/
+	cmd[strcspn(cmd, "\n")] = '\0';
 }

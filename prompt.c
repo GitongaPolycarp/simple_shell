@@ -1,7 +1,7 @@
 #include "shell.h"
 
-void display_prompt(void)
+void disp_pmpt(void)
 {
-    leo_print("leo_shell$$$$$ ");
+    shell_print("Joseph_Polycarp$");
 }
 
