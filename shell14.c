@@ -6,7 +6,7 @@
  *
  * Return: (1) freed, else 0.
  */
-int bfree(void **ptr)
+int shellfree(void **ptr)
 {
 	if (ptr && *ptr)
 	{

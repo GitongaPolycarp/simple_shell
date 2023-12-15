@@ -1,24 +1,24 @@
 #include "shell.h"
 
 /**
- * _myenv - prints current environ
+ * shell_env - prints current environ
  * @info: Structure contains arguments. Used to maintain
  * Return: Always 0
  */
-int _myenv(info_t *info)
+int shell_env(info_t *info)
 {
 	print_list_str(info->env);
 	return (0);
 }
 
 /**
- * _getenv - gets value of environ var
+ * shell_getenv - gets value of environ var
  * @info: Structure contains arg.
  * @name: str
  *
  * Return: value
  */
-char *_getenv(info_t *info, const char *name)
+char *shell_getenv(info_t *info, const char *name)
 {
 	list_t *node = info->env;
 	char *p;
@@ -34,11 +34,11 @@ char *_getenv(info_t *info, const char *name)
 }
 
 /**
- * _mysetenv - Initialize a new environ variable,or modify an existing one
+ * shell_setenv - Initialize a new environ variable,or modify an existing one
  * @info: Structure contains args
  *  Return: Always 0
  */
-int _mysetenv(info_t *info)
+int shell_setenv(info_t *info)
 {
 	if (info->argc != 3)
 	{
@@ -51,11 +51,11 @@ int _mysetenv(info_t *info)
 }
 
 /**
- * _myunsetenv - Remove an environment var
+ * shell_unsetenv - Remove an environment var
  * @info: Structure contains potential args.
  *  Return: Always 0
  */
-int _myunsetenv(info_t *info)
+int shell_unsetenv(info_t *info)
 {
 	int i;
 
