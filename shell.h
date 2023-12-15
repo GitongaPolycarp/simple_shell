@@ -140,10 +140,6 @@ char *_strchr(char *, char);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
-<<<<<<< HEAD
-/* shell21.c */
-=======
->>>>>>> 57b9cc2905ed7759000d7696b0d76f5229214b89
 char *_memset(char *, char, unsigned int);
 void _ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
