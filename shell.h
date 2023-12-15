@@ -152,9 +152,9 @@ char *_strchr(char *, char);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
-/* toem_realloc.c */
+/* shell21.c */
 char *_memset(char *, char, unsigned int);
-void ffree(char **);
+void _ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
 /* toem_memory.c */

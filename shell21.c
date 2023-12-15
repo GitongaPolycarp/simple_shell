@@ -9,18 +9,18 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int j;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	for (j = 0; j < n; j++)
+		s[j] = b;
 	return (s);
 }
 
 /**
- * ffree - func frees str of str
+ * _ffree - func frees str of str
  * @pp: str of sttrs
  */
-void ffree(char **pp)
+void _ffree(char **pp)
 {
 	char **a = pp;
 
@@ -32,7 +32,7 @@ void ffree(char **pp)
 }
 
 /**
- * _realloc - func relocates block of mem
+ * *_realloc - func relocates block of mem
  * @ptr: ptr to prev malloc'd block
  * @old_size: byte_size of prev block
  * @new_size: byte_size of new block
