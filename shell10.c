@@ -2,7 +2,7 @@
 
 /**
  * input_buf - buffers chained commands
- * @info: parameter struct
+ * @info: parameter structure
  * @buf: address of buffer
  * @len: address of len var
  *
@@ -13,7 +13,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 	ssize_t r = 0;
 	size_t len_p = 0;
 
-	if (!*len) /* if nothing left in the buffer, fill it */
+	if (!*len) /* if nothing is left in the buffer, fill it */
 	{
 		/*bfree((void **)info->cmd_buf);*/
 		free(*buf);
@@ -45,7 +45,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input - gets a line minus the newline
+ * get_input - gets line minus the newline
  * @info: parameter struct
  *
  * Return: bytes read
@@ -64,10 +64,10 @@ ssize_t get_input(info_t *info)
 	if (len)	/* we have commands left in the chain buffer */
 	{
 		j = i; /* init new iterator to current buf position */
-		p = buf + i; /* get pointer for return */
+		p = buf + i; /* get the pointer for return */
 
 		check_chain(info, buf, &j, i, len);
-		while (j < len) /* iterate to semicolon or end */
+		while (j < len) /* iterate to the semicolon or end */
 		{
 			if (is_chain(info, buf, &j))
 				break;
@@ -86,7 +86,7 @@ ssize_t get_input(info_t *info)
 	}
 
 	*buf_p = buf; /* else not a chain, pass back buffer from _getline() */
-	return (r); /* return length of buffer from _getline() */
+	return (r); /* return the length of buffer from _getline() */
 }
 
 /**
@@ -110,8 +110,8 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 }
 
 /**
- * _getline - gets the next line of input from STDIN
- * @info: parameter struct
+ * _getline - gets next line of input from STDIN
+ * @info: parameter structure
  * @ptr: address of pointer to buffer, preallocated or NULL
  * @length: size of preallocated ptr buffer if not NULL
  *
@@ -158,7 +158,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 
 /**
  * sigintHandler - blocks ctrl-C
- * @sig_num: the signal number
+ * @sig_num: signal number
  *
  * Return: void
  */

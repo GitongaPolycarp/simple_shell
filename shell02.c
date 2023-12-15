@@ -1,17 +1,16 @@
 #include "shell.h"
 
 /**
- * _myexit - exits the shell
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
- *  Return: exits with a given exit status
+ * _myexit - exits shell
+ * @info: Struct contains arg. Used to maintain constant func prototype.
+ *  Return: exits given exit status
  *         (0) if info.argv[0] != "exit"
  */
 int _myexit(info_t *info)
 {
 	int exitcheck;
 
-	if (info->argv[1])  /* If there is an exit arguement */
+	if (info->argv[1])  /* If there is an exit arg */
 	{
 		exitcheck = _erratoi(info->argv[1]);
 		if (exitcheck == -1)
@@ -30,9 +29,8 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes the current directory of the process
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ * _mycd - function changes current directory of the process
+ * @info: Struct contains args. Used to maintain const funct prototype.
  *  Return: Always 0
  */
 int _mycd(info_t *info)
@@ -80,9 +78,8 @@ int _mycd(info_t *info)
 }
 
 /**
- * _myhelp - changes the current directory of the process
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ * _myhelp - changes current directory of the process
+ * @info: Struct contains args. Used to maintain const function prototype.
  *  Return: Always 0
  */
 int _myhelp(info_t *info)
@@ -90,7 +87,7 @@ int _myhelp(info_t *info)
 	char **arg_array;
 
 	arg_array = info->argv;
-	_puts("help call works. Function not yet implemented \n");
+	_puts("help call works. Funct not yet implemented \n");
 	if (0)
 		_puts(*arg_array); /* temp att_unused workaround */
 	return (0);
