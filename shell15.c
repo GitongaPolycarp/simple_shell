@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * is_cmd - determines if a file is an executable command
- * @info: the info struct
- * @path: path to the file
+ * is_cmd - func checks if file is an exec command
+ * @info: the infomation structure
+ * @path: PATH of a file
  *
- * Return: 1 if true, 0 otherwise
+ * Return: (1)true, (0) false
  */
 int is_cmd(info_t *info, char *path)
 {
@@ -23,12 +23,12 @@ int is_cmd(info_t *info, char *path)
 }
 
 /**
- * dup_chars - duplicates characters
- * @pathstr: the PATH string
- * @start: starting index
- * @stop: stopping index
+ * dup_chars - func duplicates characs
+ * @pathstr: the given PATH string
+ * @start: startin index
+ * @stop: stoppin index
  *
- * Return: pointer to new buffer
+ * Return: (*p) to new buffer
  */
 char *dup_chars(char *pathstr, int start, int stop)
 {
@@ -43,12 +43,12 @@ char *dup_chars(char *pathstr, int start, int stop)
 }
 
 /**
- * find_path - finds this cmd in the PATH string
- * @info: the info struct
- * @pathstr: the PATH string
- * @cmd: the cmd to find
+ * find_path - func find cmd in  PATH str
+ * @info: the inf structure
+ * @pathstr: the PATH str
+ * @cmd: the cmd to be found
  *
- * Return: full path of cmd if found or NULL
+ * Return: (full path) cmd , else (null)
  */
 char *find_path(info_t *info, char *pathstr, char *cmd)
 {

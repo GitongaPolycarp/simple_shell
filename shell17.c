@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: the string whose length to check
+ * _strlen - func gives the len of a str
+ * @s: the str len to checks
  *
- * Return: integer length of string
+ * Return: int len of str
  */
 int _strlen(char *s)
 {
@@ -19,11 +19,11 @@ int _strlen(char *s)
 }
 
 /**
- * _strcmp - performs lexicogarphic comparison of two strangs.
- * @s1: the first strang
- * @s2: the second strang
+ * _strcmp - func performs compa of 2 strings.
+ * @s1: the 1st string
+ * @s2: the 2nd strang
  *
- * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
+ * Return: negative success, positive, zero
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -41,11 +41,11 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * starts_with - checks if needle starts with haystack
- * @haystack: string to search
- * @needle: the substring to find
+ * starts_with - func looks if nedle begins with haystack
+ * @haystack: str to search
+ * @needle: the sub_str to look for
  *
- * Return: address of next char of haystack or NULL
+ * Return: address, else,  NULL
  */
 char *starts_with(const char *haystack, const char *needle)
 {
@@ -56,11 +56,11 @@ char *starts_with(const char *haystack, const char *needle)
 }
 
 /**
- * _strcat - concatenates two strings
- * @dest: the destination buffer
+ * _strcat - func concatenates 2 strs
+ * @dest: the destin  buffer
  * @src: the source buffer
  *
- * Return: pointer to destination buffer
+ * Return: *p to destin buffer
  */
 char *_strcat(char *dest, char *src)
 {

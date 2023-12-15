@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * get_history_file - gets the history file
- * @info: parameter struct
+ * get_history_file - func displays history file
+ * @info: param structure
  *
- * Return: allocated string containg history file
+ * Return: allocd str with histy file
  */
 
 char *get_history_file(info_t *info)
@@ -25,10 +25,10 @@ char *get_history_file(info_t *info)
 }
 
 /**
- * write_history - creates a file, or appends to an existing file
- * @info: the parameter struct
+ * write_history - crtes file, or appends existg file
+ * @info: param structs
  *
- * Return: 1 on success, else -1
+ * Return: 1 success, fail(-1)
  */
 int write_history(info_t *info)
 {
@@ -54,10 +54,10 @@ int write_history(info_t *info)
 }
 
 /**
- * read_history - reads history from file
- * @info: the parameter struct
+ * read_history - func reads hstry of a file
+ * @info: the struct param
  *
- * Return: histcount on success, 0 otherwise
+ * Return: history count success, 0 on fail
  */
 int read_history(info_t *info)
 {
@@ -103,12 +103,12 @@ int read_history(info_t *info)
 }
 
 /**
- * build_history_list - adds entry to a history linked list
- * @info: Structure containing potential arguments. Used to maintain
+ * build_history_list - func sums entry to hist linkedlist
+ * @info: Struct with potential argums. Use to maintn
  * @buf: buffer
- * @linecount: the history linecount, histcount
+ * @linecount: the hist countline, histcount
  *
- * Return: Always 0
+ * Return: Always(0)
  */
 int build_history_list(info_t *info, char *buf, int linecount)
 {
@@ -124,10 +124,10 @@ int build_history_list(info_t *info, char *buf, int linecount)
 }
 
 /**
- * renumber_history - renumbers the history linked list after changes
- * @info: Structure containing potential arguments. Used to maintain
+ * renumber_history - func re_nums the hist linkedlist after changess
+ * @info: Struct potential argums. Useto maintain
  *
- * Return: the new histcount
+ * Return: a new histcount.
  */
 int renumber_history(info_t *info)
 {

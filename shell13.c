@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * list_len - determines length of linked list
- * @h: pointer to first node
+ * list_len - func detmines len of a linked-list
+ * @h: *p to 1st node
  *
- * Return: size of list
+ * Return: size (list)
  */
 size_t list_len(const list_t *h)
 {
@@ -19,10 +19,10 @@ size_t list_len(const list_t *h)
 }
 
 /**
- * list_to_strings - returns an array of strings of the list->str
- * @head: pointer to first node
+ * list_to_strings - func gives array of strngs of list->str
+ * @head: *p to 1st node
  *
- * Return: array of strings
+ * Return: array strngs
  */
 char **list_to_strings(list_t *head)
 {
@@ -56,10 +56,10 @@ char **list_to_strings(list_t *head)
 
 
 /**
- * print_list - prints all elements of a list_t linked list
- * @h: pointer to first node
+ * print_list - func prints elems of list_t linked_list
+ * @h: *p to first node
  *
- * Return: size of list
+ * Return: size (list)
  */
 size_t print_list(const list_t *h)
 {
@@ -79,12 +79,12 @@ size_t print_list(const list_t *h)
 }
 
 /**
- * node_starts_with - returns node whose string starts with prefix
- * @node: pointer to list head
- * @prefix: string to match
- * @c: the next character after prefix to match
+ * node_starts_with - func gives node that str begins with a prefix
+ * @node: *p to list_head
+ * @prefix: str to be matched
+ * @c: the next char after prefix to be matcedh
  *
- * Return: match node or null
+ * Return: match node on success,(null)
  */
 list_t *node_starts_with(list_t *node, char *prefix, char c)
 {
@@ -101,11 +101,11 @@ list_t *node_starts_with(list_t *node, char *prefix, char c)
 }
 
 /**
- * get_node_index - gets the index of a node
- * @head: pointer to list head
- * @node: pointer to the node
+ * get_node_index - func gives index of a given node
+ * @head: *p to a list_head
+ * @node: *p to a node
  *
- * Return: index of node or -1
+ * Return: index on success, -1 (fail)
  */
 ssize_t get_node_index(list_t *head, list_t *node)
 {
